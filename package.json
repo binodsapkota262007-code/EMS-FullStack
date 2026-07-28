@@ -1,0 +1,6 @@
+{
+  "name": "ems-fullstack",
+  "dependencies": {
+    "recharts": "^3.10.0"
+  }
+}
