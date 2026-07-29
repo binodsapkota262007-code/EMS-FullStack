@@ -41,15 +41,15 @@ const EmployeeForm = ({initialData, onSuccess, onCancel}) => {
   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 text-sm text-slate-700">
     <div>
       <label className="block mb-2">First Name</label>
-      <input name="firstName" required defaultValue={initialData?.firstName} />
+      <input name="firstName" className="text-slate-1900" required defaultValue={initialData?.firstName} />
     </div> 
     <div>
       <label className="block mb-2">Last Name</label>
-      <input name="lastName" required defaultValue={initialData?.lastName} />
+      <input name="lastName" className="text-slate-1900" required defaultValue={initialData?.lastName} />
     </div>
      <div>
       <label className="block mb-2">Phone Number</label>
-      <input name="phone" required defaultValue={initialData?.phone} />
+      <input name="phone" className="text-slate-1900" required defaultValue={initialData?.phone} />
     </div>
      <div>
       <label className="block mb-2">Join Date</label>

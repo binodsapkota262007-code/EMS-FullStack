@@ -184,45 +184,45 @@ const PrintPayslip = () => {
       </div>
 
       {/* SALARY TABLE */}
-      <div className="rounded-xl border border-slate-200 overflow-hidden mb-6 transition-all duration-300 hover:shadow-lg hover:shadow-indigo-100 animate-[fadeInUp_0.8s_ease-out]">
-        <table className="w-full text-sm">
-          <thead>
-            <tr className="bg-slate-50">
-              <th className="text-left py-3 px-4 text-xs text-slate-500">
-                Description
-              </th>
-              <th className="text-right py-3 px-4 text-xs text-slate-500">
-                Amount
-              </th>
-            </tr>
-          </thead>
+<div className="rounded-xl border border-slate-200 overflow-hidden mb-6 transition-all duration-300 hover:shadow-lg hover:shadow-indigo-100 animate-[fadeInUp_0.8s_ease-out]">
+  <table className="w-full text-sm">
+    <thead>
+      <tr className="bg-slate-50">
+        <th className="text-left py-3 px-4 text-xs text-slate-900">
+          Description
+        </th>
+        <th className="text-right py-3 px-4 text-xs text-slate-900">
+          Amount
+        </th>
+      </tr>
+    </thead>
 
-          <tbody>
-            {[
-              ["Basic Salary", payslip.basicSalary],
-              ["Allowances", `+${payslip.allowances}`],
-              ["Deductions", `-${payslip.deductions}`],
-            ].map(([label, value], i) => (
-              <tr
-                key={i}
-                className="border-t transition-all duration-200 hover:bg-slate-50"
-              >
-                <td className="py-3 px-4">{label}</td>
-                <td className="text-right py-3 px-4 font-medium">
-                  NPR {Number(value).toLocaleString()}
-                </td>
-              </tr>
-            ))}
+    <tbody>
+      {[
+        ["Basic Salary", payslip.basicSalary],
+        ["Allowances", `+${payslip.allowances}`],
+        ["Deductions", `-${payslip.deductions}`],
+      ].map(([label, value], i) => (
+        <tr
+          key={i}
+          className="border-t transition-all duration-200 hover:bg-slate-50"
+        >
+          <td className="py-3 px-4 text-slate-700">{label}</td>
+          <td className="text-right text-slate-900 py-3 px-4 font-medium">
+            NPR {Number(value).toLocaleString()}
+          </td>
+        </tr>
+      ))}
 
-            <tr className="border-t-2 bg-slate-50">
-              <td className="py-4 px-4 font-bold">Net Salary</td>
-              <td className="text-right py-4 px-4 font-bold text-lg">
-                NPR {payslip.netSalary?.toLocaleString()}
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <tr className="border-t-2 bg-slate-50">
+        <td className="py-4 px-4 font-bold text-slate-900">Net Salary</td>
+        <td className="text-right py-4 px-4 font-bold text-lg text-slate-900">
+          NPR {payslip.netSalary?.toLocaleString()}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
       </div>
 

@@ -197,15 +197,15 @@ const EmployeeDashboard = ({ data }) => {
             <div className="absolute left-0 top-0 bottom-0 w-1 rounded-r-full bg-slate-400 group-hover:bg-indigo-500 group-hover:w-1.5 transition-all duration-300" />
 
             <div>
-              <p className="text-sm font-medium text-slate-700">
+              <p className="text-sm font-medium text-slate-1900">
                 {card.title}
               </p>
 
-              <p className="text-2xl font-bold text-slate-900 mt-1">
+              <p className="text-2xl font-bold text-slate-1900 mt-1">
                 {card.value}
               </p>
 
-              <p className="text-sm text-slate-500 mt-1">
+              <p className="text-sm text-slate-1900 mt-1">
                 {card.subtitle}
               </p>
             </div>
@@ -294,7 +294,7 @@ const EmployeeDashboard = ({ data }) => {
             <p className="text-3xl font-bold text-slate-900">
               {attendanceTotal.toLocaleString()}
             </p>
-            <p className="text-xs font-medium text-slate-400 mt-0.5">
+            <p className="text-xs font-medium text-slate-1900 mt-0.5">
               Days
             </p>
           </div>

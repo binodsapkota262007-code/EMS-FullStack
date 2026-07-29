@@ -111,7 +111,7 @@ const Settings = () => {
           </div>
 
           <div>
-            <p className="font-medium text-slate-900">
+            <p className="font-medium text-slate-1900">
               Password
             </p>
 

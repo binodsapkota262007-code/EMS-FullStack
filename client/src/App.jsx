@@ -1,4 +1,3 @@
-
 import {Toaster} from 'react-hot-toast'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import LoginLanding from './pages/LoginLandnig'
@@ -11,6 +10,7 @@ import Payslips from './pages/Payslips'
 import Settings from './pages/Settings'
 import PrintPayslip from './pages/PrintPayslip'
 import LoginForm from './components/LoginForm'
+import ForgotPassword from './pages/ForgotPassword'
 import { useAuth } from './context/AuthContext'
 import Loading from './components/Loading'
 
@@ -59,6 +59,7 @@ const App = () => {
             />
           }
         />
+        <Route path='/forgot-password' element={<ForgotPassword />} />
 
         <Route element={<RequireAuth><Layout /></RequireAuth>}>
           <Route path='/dashboard' element={<Dashboard/>} /> 

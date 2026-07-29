@@ -45,7 +45,7 @@ const Employees = () => {
 
       <div className="flex justify-between items-center mb-6 animate-fade-in-up">
         <div>
-          <h1 className="text-2xl font-bold text-gray-800">
+          <h1 className="text-2xl font-bold text-gray-1900">
             Employee Directory
           </h1>
 

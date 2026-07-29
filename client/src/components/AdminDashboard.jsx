@@ -123,7 +123,7 @@ const AdminDashboard = ({ data }) => {
     return [
       { name: "Employees", value: data.totalEmployees || 0, color: COLORS[0] },
       { name: "Departments", value: data.totalDepartments || 0, color: COLORS[1] },
-      { name: "Today's Attendance", value: data.todayAttendance || 0, color: COLORS[2] },
+      { name: "Total Attendance", value: data.todayAttendance || 0, color: COLORS[2] },
       { name: "Total Leaves", value: data.totalLeaves || 0, color: COLORS[3] },
     ];
   }, [data]);
@@ -156,7 +156,7 @@ const AdminDashboard = ({ data }) => {
 
       {/* Header */}
       <div className="mb-8 animate-fade-in-up">
-        <h1 className="text-3xl font-bold text-slate-900">
+        <h1 className="text-3xl font-bold text-slate-1900">
           Dashboard
         </h1>
 

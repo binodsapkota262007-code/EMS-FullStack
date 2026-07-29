@@ -41,7 +41,7 @@ const LoginForm = ({ role, title, subtitle }) => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col md:flex-row bg-white">
+    <div className="min-h-screen flex flex-col md:flex-row bg-white dark:bg-slate-950">
 
       {/* LEFT SIDE */}
       <LoginLeftside />
@@ -53,7 +53,7 @@ const LoginForm = ({ role, title, subtitle }) => {
           {/* BACK BUTTON */}
           <Link
             to="/login"
-            className="group inline-flex items-center gap-2 text-slate-400 hover:text-indigo-600 text-sm mb-8 transition-all duration-300"
+            className="group inline-flex items-center gap-2 text-slate-400 dark:text-slate-500 hover:text-indigo-600 dark:hover:text-indigo-400 text-sm mb-8 transition-all duration-300"
           >
             <ArrowLeftIcon className="w-4 h-4 transition-transform duration-300 group-hover:-translate-x-1" />
             Back to portal selections
@@ -61,11 +61,11 @@ const LoginForm = ({ role, title, subtitle }) => {
 
           {/* HEADER */}
           <div className="mb-8">
-            <h1 className="text-3xl font-semibold text-slate-900 tracking-tight">
+            <h1 className="text-3xl font-semibold text-slate-900 dark:text-white tracking-tight">
               {title}
             </h1>
 
-            <p className="text-slate-500 mt-2 text-sm leading-relaxed">
+            <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm leading-relaxed">
               {subtitle}
             </p>
 
@@ -78,7 +78,7 @@ const LoginForm = ({ role, title, subtitle }) => {
 
             {/* EMAIL */}
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">
+              <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
                 Email Address
               </label>
 
@@ -91,14 +91,22 @@ const LoginForm = ({ role, title, subtitle }) => {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                   placeholder="example@gmail.com"
-                  className="pl-10"
+                  className="
+                    w-full pl-10 pr-4 py-2.5
+                    bg-white dark:bg-slate-900
+                    text-slate-900 dark:text-white
+                    border border-slate-200 dark:border-slate-700 rounded-md
+                    placeholder:text-slate-400 dark:placeholder:text-slate-500
+                    focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent
+                    transition
+                  "
                 />
               </div>
             </div>
 
             {/* PASSWORD */}
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">
+              <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
                 Password
               </label>
 
@@ -111,7 +119,15 @@ const LoginForm = ({ role, title, subtitle }) => {
                   onChange={(e) => setPassword(e.target.value)}
                   required
                   placeholder="••••••••"
-                  className="pl-10 pr-11"
+                  className="
+                    w-full pl-10 pr-11 py-2.5
+                    bg-white dark:bg-slate-900
+                    text-slate-900 dark:text-white
+                    border border-slate-200 dark:border-slate-700 rounded-md
+                    placeholder:text-slate-400 dark:placeholder:text-slate-500
+                    focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent
+                    transition
+                  "
                 />
 
                 <button
@@ -126,6 +142,16 @@ const LoginForm = ({ role, title, subtitle }) => {
                   )}
                 </button>
               </div>
+            </div>
+
+            {/* FORGOT PASSWORD LINK */}
+            <div className="flex justify-end -mt-2">
+              <Link
+                to="/forgot-password"
+                className="text-sm text-indigo-600 dark:text-indigo-400 hover:underline"
+              >
+                Forgot password?
+              </Link>
             </div>
 
             {/* SUBMIT BUTTON */}

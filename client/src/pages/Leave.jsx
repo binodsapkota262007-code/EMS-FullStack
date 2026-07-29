@@ -75,7 +75,7 @@ const Leave = () => {
       {/* Header */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
         <div>
-          <h1 className="page-title">Leave Management</h1>
+          <h1 className="page-title text-2xl font-bold text-gray-900">Leave Management</h1>
           <p className="page-subtitle">
             {isAdmin
               ? "Manage leave applications"
@@ -175,7 +175,7 @@ const Leave = () => {
                 <p
                   className="
                     text-2xl font-bold
-                    text-slate-900 tracking-tight
+                    text-slate-900 dark:text-white tracking-tight
 
                     transition-transform duration-300
                     group-hover:scale-105
