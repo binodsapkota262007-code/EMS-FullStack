@@ -10,7 +10,7 @@ import Payslips from './pages/Payslips'
 import Settings from './pages/Settings'
 import PrintPayslip from './pages/PrintPayslip'
 import LoginForm from './components/LoginForm'
-import ForgotPassword from './pages/ForgotPassword'
+import ManageUsers from './pages/ManageUsers'
 import { useAuth } from './context/AuthContext'
 import Loading from './components/Loading'
 
@@ -59,7 +59,6 @@ const App = () => {
             />
           }
         />
-        <Route path='/forgot-password' element={<ForgotPassword />} />
 
         <Route element={<RequireAuth><Layout /></RequireAuth>}>
           <Route path='/dashboard' element={<Dashboard/>} /> 
@@ -68,6 +67,7 @@ const App = () => {
           <Route path='/leave' element={<Leave/>} />  
           <Route path='/payslips' element={<Payslips/>} />  
           <Route path='/settings' element={<Settings/>} />  
+          <Route path='/admin/manage-users' element={<ManageUsers/>} />
         </Route>
 
         <Route path='/print/payslip/:id' element={<PrintPayslip/>} />

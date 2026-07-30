@@ -14,6 +14,7 @@ import leaveRouter from "./routes/leaveRoutes.js";
 import payslipRouter from "./routes/payslipRoutes.js";
 import dashboardRouter from "./routes/dashboardRouter.js";
 import paymentRouter from "./routes/paymentRoutes.js";
+import userRouter from "./routes/userRoutes.js";
 import { serve } from "inngest/express";
 import { inngest, functions } from "./inngest/index.js";
 
@@ -40,6 +41,7 @@ app.use("/api/leaves", leaveRouter);
 app.use("/api/payslips", payslipRouter);
 app.use("/api/dashboard", dashboardRouter);
 app.use("/api/payments", paymentRouter);
+app.use("/api/users", userRouter);
 
 // Connect to MongoDB
 await connectDB();

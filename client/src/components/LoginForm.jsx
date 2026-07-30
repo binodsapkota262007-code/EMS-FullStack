@@ -144,16 +144,6 @@ const LoginForm = ({ role, title, subtitle }) => {
               </div>
             </div>
 
-            {/* FORGOT PASSWORD LINK */}
-            <div className="flex justify-end -mt-2">
-              <Link
-                to="/forgot-password"
-                className="text-sm text-indigo-600 dark:text-indigo-400 hover:underline"
-              >
-                Forgot password?
-              </Link>
-            </div>
-
             {/* SUBMIT BUTTON */}
             <button
               type="submit"
